@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>占位图自动生成</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+</head>
+<body>
+<h1>占位图自动生成</h1>
+<p>为您自动生成指定大小的占位图图片。将如下代码写入到网页中即可：</p>
+<pre>&lt;img src="{{ example_url }}" /&gt;</pre>
+<h2>示例：</h2>
+<img src="{% url 'get_placeholder_image' width=50  height=50 %}" />
+<img src="{% url 'get_placeholder_image' width=200 height=50 %}" />
+<img src="{% url 'get_placeholder_image' width=50  height=200 %}" />
+</body>
+</html>
